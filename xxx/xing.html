@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜鸟学习html5</title>
+</head>
+<body>
+
+<p>Canvas:</p>
+<canvas id="myCanvas" width="800" height="500" style="border:1px solid #d3d3d3;">
+    您的浏览器不支持 HTML5 canvas 标签。
+</canvas>
+
+<script>
+
+    var c=document.getElementById('myCanvas');  //获取canvas标签
+    var ctx=c.getContext('2d');  //设置canvas上下文对象
+    var img=new Image();
+    img.src='./story.jpeg';
+
+    img.onload=function(){
+        ctx.drawImage(img,100,100,1000,1000,100,100,500,500);  //页面加载的时候，给canvas上下文对象设置图片（这个图片是上面你定义的img标签的图片// ）
+    }
+</script>
+
+</body>
+</html>
